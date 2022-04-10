@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,700;1,400&display=swap');
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h1 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.45;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  color: var(--medium-grey);
+  letter-spacing: -0.05rem;
+}
+
+img {
+  width: 0.875rem;
+}
+
+button {
+  font-size: 13px;
+  line-height: 2.875rem;
+  display: flex;
+  justify-content: center;
+  width: 2.625rem;
+  height: 2.625rem;
+  border: 0;
+  border-radius: 4rem;
+  color: var(--medium-grey);
+  background-color: var(--dark-blue);
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+button:hover,
+button:focus {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+button.selected {
+  color: var(--white);
+  background-color: var(--medium-grey);
+}
+
+.card {
+  background: radial-gradient(
+    circle at top,
+    hsl(215, 20%, 17%),
+    hsl(216, 18%, 12%)
+  );
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 1rem;
+  max-width: 327px;
+  margin: 3px auto 0;
+  min-height: 360px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--dark-blue);
+  border-radius: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  font-size: 14px;
+  line-height: 50px;
+  width: 100%;
+  padding: 0 1rem;
+  height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background-color: var(--orange);
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.illustration {
+  display: block;
+  width: 145px;
+  height: auto;
+  margin: 0.625rem auto 1.5rem;
+}
+
+.badge {
+  line-height: 1;
+  display: inline-block;
+  color: var(--orange);
+  background-color: var(--dark-blue);
+  margin-bottom: 1.375rem;
+  padding: 10px 0.875rem 7px;
+  border-radius: 2rem;
+  letter-spacing: 0.01em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.fade {
+    animation: 0.2s 0s fade backwards ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 1rem;
+    line-height: 3.25rem;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .card {
+    max-width: 410px;
+    min-height: 415px;
+    border-radius: 2rem;
+    padding: 2rem 2.5rem 2rem 2rem;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .btn-group {
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+
+  .illustration {
+    width: 162px;
+    margin: 0.875rem auto 2rem;
+  }
+
+  .badge {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    padding: 10px 1.25rem 7px;
+    letter-spacing: 0.01em;
+  }
+
+}
